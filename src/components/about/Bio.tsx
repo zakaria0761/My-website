@@ -20,7 +20,7 @@ export function Bio() {
         >
           <div className="relative mx-auto h-56 w-56 sm:h-64 sm:w-64 overflow-hidden rounded-2xl bg-secondary shadow-md">
             <Image
-              src={portfolio.avatar}
+              src={portfolio.aboutAvatar}
               alt={portfolio.name}
               fill
               className="object-cover"
@@ -53,11 +53,7 @@ export function Bio() {
             <p className="mt-1 text-lg text-muted-foreground">{portfolio.role}</p>
           </div>
 
-          <p className="text-muted-foreground leading-relaxed">{portfolio.bio}</p>
-          <p className="text-muted-foreground leading-relaxed">
-            When I&apos;m not coding, you&apos;ll find me exploring new design trends, contributing to
-            open-source projects, or sharing knowledge with the developer community.
-          </p>
+          <p className="text-muted-foreground leading-relaxed">{portfolio.bio}</p>   
 
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">

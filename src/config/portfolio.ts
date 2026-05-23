@@ -8,11 +8,12 @@ export const portfolio = {
   // ----------------------------------------------------------
   name: "Zakaria Aherrach",
   initials: "ZA",
-  role: "English",
+  role: "English Teacher",
   location: "Agadir, MA",
   bio: "I am Zakaria, an English Studies graduate with a passion for teaching, language, and creativity. I enjoy creating engaging learning experiences and helping students build confidence in English. This portfolio reflects my journey as a teacher, showcasing my experiences, teaching practice, and achievements. Feel free to explore my work and learn more about me.",
-  shortBio: "Full Stack Developer based in San Francisco, building clean and performant web experiences.",
-  avatar: "/avatar.jpg", // Place your photo in /public/avatar.jpg
+  shortBio: "",
+  avatar: "/images/Zakaria Aherach-cropped.png", // Place your photo in /public/avatar.jpg
+  aboutAvatar: "/images/Zakaria Aherach.jpg", // A larger version of your photo for the about page (optional)
   available: false, // Set to false to hide "Available for work" badge
 
   // ----------------------------------------------------------
@@ -53,12 +54,12 @@ export const portfolio = {
   projects: [
     {
       id: 1,
-      title: "SaaS Dashboard",
+      title: "My Teaching Philosophy",
       description:
         "A full-featured analytics dashboard for SaaS products with real-time charts, user management, and billing integration. Built with Next.js and Stripe.",
-      image: "/images/onlineELT1.png",
+      image: "/images/MixCollage.jpg",
       github: "https://github.com/alexjohnson/saas-dashboard",
-      live: "/portfolio/observaation",
+      live: "/portfolio/teacher-philosophy",
       category: "My Teaching Philosophy",
       featured: true,
     },
@@ -66,7 +67,7 @@ export const portfolio = {
       id: 2,
       title: "Reflections on Lessons Taught",
       description:
-        "A cross-platform mobile task manager with drag-and-drop boards, real-time sync, and team collaboration features built with React Native.",
+        "Once, I had the chance to teach a lesson about animals to a young learner online. I prepared my lesson plan using different materials such as pictures, flashcards, and a short video. The topic was simple and interesting, but the lesson did not go as successfully as I expected.",
       image: "/images/onlineElt1.png",
       tech: ["React Native", "Expo", "Firebase", "TypeScript"],
       github: "https://github.com/alexjohnson/task-manager",
@@ -86,30 +87,7 @@ export const portfolio = {
       category: "TPs Observation Grid",
       featured: false,
     },
-    {
-      id: 4,
-      title: "AI Chat Interface",
-      description:
-        "A sleek chat interface for interacting with large language models, featuring streaming responses, conversation history, and markdown rendering.",
-      image: "/portfolio/ai-chat.jpg",
-      tech: ["Next.js", "OpenAI API", "Tailwind CSS", "TypeScript"],
-      github: "https://github.com/alexjohnson/ai-chat",
-      live: "https://ai-chat-demo.vercel.app",
-      category: "Open Source",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Portfolio UI Kit",
-      description:
-        "A free Figma UI kit for developer portfolios with 20+ templates, reusable components, and dark/light mode designs.",
-      image: "/portfolio/ui-kit.jpg",
-      tech: ["Figma", "UI Design", "Design Tokens"],
-      github: "https://github.com/alexjohnson/portfolio-ui-kit",
-      live: "https://figma.com/community/file/example",
-      category: "Open Source",
-      featured: false,
-    },
+    
   ],
 
   // ----------------------------------------------------------

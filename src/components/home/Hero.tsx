@@ -98,7 +98,7 @@ export function Hero() {
           >
             <Button asChild size="lg">
               <Link href="/portfolio">
-                View my work
+                View my portfolio
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
