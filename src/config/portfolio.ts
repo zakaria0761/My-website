@@ -56,7 +56,7 @@ export const portfolio = {
       id: 1,
       title: "My Teaching Philosophy",
       description:
-        "A full-featured analytics dashboard for SaaS products with real-time charts, user management, and billing integration. Built with Next.js and Stripe.",
+        "My teaching philosophy centers on interactive, student-led learning that builds practical communication skills from day one. I design high-energy, gamified lessons using multimedia and structured language patterns, allowing young learners to shift quickly from passive vocabulary recognition to active, confident speech. Grounded in empathy and educational psychology, I adapt lessons in real-time to meet each child’s unique needs. By cultivating a warm, low-anxiety environment where mistakes are welcomed as learning milestones, I build respectful relationships and positive reinforcement to ensure every student feels supported, motivated, and appropriately challenged to succeed.",
       image: "/images/MixCollage.jpg",
       github: "https://github.com/alexjohnson/saas-dashboard",
       live: "/portfolio/teacher-philosophy",
