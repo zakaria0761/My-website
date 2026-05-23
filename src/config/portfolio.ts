@@ -56,7 +56,7 @@ export const portfolio = {
       title: "SaaS Dashboard",
       description:
         "A full-featured analytics dashboard for SaaS products with real-time charts, user management, and billing integration. Built with Next.js and Stripe.",
-      image: "/images/onlineElt1.png",
+      image: "/images/onlineELT1.png",
       github: "https://github.com/alexjohnson/saas-dashboard",
       live: "/portfolio/observaation",
       category: "My Teaching Philosophy",
