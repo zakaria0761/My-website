@@ -6,7 +6,7 @@ export const portfolio = {
   // ----------------------------------------------------------
   // Personal Info
   // ----------------------------------------------------------
-  name: "Zakaria Aherach",
+  name: "Zakaria Ahe rach",
   initials: "ZA",
   role: "English Teacher",
   location: "Agadir, MA",
