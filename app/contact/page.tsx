@@ -30,8 +30,9 @@ export default function ContactPage() {
               Let&apos;s work together
             </h1>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Have a project in mind or want to discuss an opportunity? I&apos;m
-              always open to new collaborations and conversations.
+              I&apos;m available for teaching opportunities in schools and educational institutions.
+              If you&apos;re looking for a dedicated English teacher who can help students improve their communication, grammar, and confidence, I&apos;d be glad to connect.
+              Feel free to reach out to discuss teaching positions, collaborations, or how I can contribute to your school community.
             </p>
           </div>
 
