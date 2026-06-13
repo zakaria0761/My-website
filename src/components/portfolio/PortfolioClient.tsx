@@ -30,7 +30,7 @@ export function PortfolioClient() {
         </p>
         <p className="text-muted-foreground max-w-lg">
           I would like to express my sincere gratitude to everyone who supported me throughout my TESOL training program at the American TESOL Academy in Agadir, Morocco.
-          I am especially thankful to our respected and dedicated teacher trainers: Prof. Atlagh, Prof. Ouali, Prof. El Jakouk, Prof. Chraa, Prof. Kharouaa, Prof. Bakkas, and Prof. Mahou. Their invaluable guidance, encouragement, and expertise played a significant role in my professional development.
+          I am especially thankful to our respected and dedicated teacher trainers: Prof. Atlagh, Prof. Ouali, Prof. El Jakouk, Prof. Chraa, Prof. Kharouaa, Prof. Bakkas, Prof. Madaoui, Prof. Jamaati, and Prof. Mahou. Their invaluable guidance, encouragement, and expertise played a significant role in my professional development.
           Through their instruction and mentorship, I was able to develop essential teaching skills, strengthen my confidence as an educator, and gain a deeper understanding of TESOL principles and effective language teaching methodologies.
           I truly appreciate their continuous support and dedication throughout this learning journey.
         </p>
