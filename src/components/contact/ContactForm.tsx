@@ -11,6 +11,7 @@ type FormState = "idle" | "loading" | "success" | "error";
 
 export function ContactForm() {
   const [state, setState] = React.useState<FormState>("idle");
+
   const [form, setForm] = React.useState({
     name: "",
     email: "",
@@ -20,18 +21,43 @@ export function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     setState("loading");
 
-    // TODO: Replace with your form submission logic
-    // e.g. Resend, Formspree, EmailJS, etc.
-    await new Promise((r) => setTimeout(r, 1200));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    setState("success");
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error);
+      }
+
+      setState("success");
+
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setState("error");
+    }
   };
 
   if (state === "success") {
@@ -44,16 +70,18 @@ export function ContactForm() {
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
           <CheckCircle className="h-8 w-8 text-green-500" />
         </div>
-        <h3 className="text-xl font-semibold text-foreground">Message sent!</h3>
+
+        <h3 className="text-xl font-semibold">
+          Message sent successfully!
+        </h3>
+
         <p className="text-muted-foreground max-w-sm">
-          Thanks for reaching out. I&apos;ll get back to you as soon as possible.
+          Thank you for reaching out. I'll get back to you as soon as possible.
         </p>
+
         <Button
           variant="outline"
-          onClick={() => {
-            setState("idle");
-            setForm({ name: "", email: "", message: "" });
-          }}
+          onClick={() => setState("idle")}
         >
           Send another
         </Button>
@@ -65,79 +93,62 @@ export function ContactForm() {
     <motion.form
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       onSubmit={handleSubmit}
       className="space-y-5"
     >
-      {/* Name + Email row */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <label
-            htmlFor="name"
-            className="text-sm font-medium text-foreground"
-          >
-            Name
-          </label>
+          <label htmlFor="name">Name</label>
+
           <Input
             id="name"
             name="name"
             placeholder="Your name"
-            required
             value={form.name}
             onChange={handleChange}
+            required
           />
         </div>
+
         <div className="space-y-2">
-          <label
-            htmlFor="email"
-            className="text-sm font-medium text-foreground"
-          >
-            Email
-          </label>
+          <label htmlFor="email">Email</label>
+
           <Input
             id="email"
             name="email"
             type="email"
-            placeholder="your@email.com"
-            required
+            placeholder="you@example.com"
             value={form.email}
             onChange={handleChange}
+            required
           />
         </div>
       </div>
 
-      {/* Message */}
       <div className="space-y-2">
-        <label
-          htmlFor="message"
-          className="text-sm font-medium text-foreground"
-        >
-          Message
-        </label>
+        <label htmlFor="message">Message</label>
+
         <Textarea
           id="message"
           name="message"
-          placeholder="Tell me about your project..."
           rows={6}
-          required
+          placeholder="Write your message..."
           value={form.message}
           onChange={handleChange}
+          required
         />
       </div>
 
-      {/* Submit */}
       <Button
         type="submit"
-        size="lg"
-        className="w-full sm:w-auto"
         disabled={state === "loading"}
+        className="w-full sm:w-auto"
       >
         {state === "loading" ? (
           <span className="flex items-center gap-2">
             <svg
               className="animate-spin h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
             >
               <circle
@@ -147,25 +158,28 @@ export function ContactForm() {
                 r="10"
                 stroke="currentColor"
                 strokeWidth="4"
+                fill="none"
               />
+
               <path
                 className="opacity-75"
                 fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                d="M4 12a8 8 0 018-8V0C5.37 0 0 5.37 0 12h4z"
               />
             </svg>
+
             Sending...
           </span>
         ) : (
           <span className="flex items-center gap-2">
-            <Send className="h-4 w-4" />
-            Send message
+            <Send size={18} />
+            Send Message
           </span>
         )}
       </Button>
 
       {state === "error" && (
-        <p className="text-sm text-destructive">
+        <p className="text-red-500">
           Something went wrong. Please try again.
         </p>
       )}
