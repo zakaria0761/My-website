@@ -106,19 +106,7 @@ export const portfolio = {
         "Assessed students' progress and provided feedback to improve their language skills.",
       ],
     },
-    {
-      company: "LingoAce",
-      role: "Online English Teacher",
-      period: "March 2026 — Present",
-      location: "Remote",
-      description:[
-        "Conduct online English lessons for young learners in a virtual classroom environment.",
-        "Teach speaking, reading, vocabulary, and grammar using interactive activities.",
-        "Adapt lessons to students’ levels and learning needs.",
-        "Maintain student engagement through games, discussions, and multimedia tools.",
-        "Provide regular feedback to students and parents on progress and areas for improvement.",
-      ],
-    },
+    
   ],
 
   // ----------------------------------------------------------
@@ -132,6 +120,15 @@ export const portfolio = {
       description:
         "Focus: Linguistics, Phonetics/Phonology, Applied Linguistics, Educational Psychology, Syntax, Semantics &Pragmatics, Translation & Interpretation",
     },
+    {
+      institution: "American TESOL Academy Agadir",
+      degree: "TESOL Certificate – 120 hours",
+      period: "June 2026",
+      description:[
+        "Completed comprehensive training in English language teaching methodologies, lesson planning, classroom management, and language assessment.",
+        "Developed skills to teach English to learners of different ages and proficiency levels.",
+      ]
+    }
   
   ],
 

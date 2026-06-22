@@ -47,9 +47,20 @@ export function Education() {
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground">{edu.institution}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed pt-1">
+                {Array.isArray(edu.description) ? (
+                <ul className="mb-4 space-y-2 text-sm text-muted-foreground leading-relaxed list-none">
+                  {edu.description.map((item, idx) => (
+                    <li key={idx} className="flex gap-2">
+                      <span className="mt-0.5 text-foreground">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {edu.description}
                 </p>
+              )}
               </div>
             </motion.div>
           ))}
