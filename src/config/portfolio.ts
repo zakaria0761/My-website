@@ -65,6 +65,17 @@ export const portfolio = {
     },
     {
       id: 2,
+      title: "Evaluation of the TESOL Training Program",
+      description:
+        "The 120-hour TESOL training program at the American TESOL Academy in Agadir was a highly valuable and transformative learning experience that significantly contributed to my professional growth as an English language teacher. The program combined theoretical knowledge with practical teaching experience, allowing me to develop the essential competencies required to teach English effectively to learners of different ages and proficiency levels.",
+      image: "/images/TESOL_Training.jpg",
+      github: "https://github.com/alexjohnson/task-manager",
+      live: "/portfolio/TESOl-Evaluation",
+      category: "Evaluation of the TESOL Training",
+      featured: true,
+    },
+    {
+      id: 3,
       title: "Reflections on Lessons Taught",
       description:
         "Once, I had the chance to teach a lesson about animals to a young learner online. I prepared my lesson plan using different materials such as pictures, flashcards, and a short video. The topic was simple and interesting, but the lesson did not go as successfully as I expected.",
@@ -76,7 +87,7 @@ export const portfolio = {
       featured: true,
     },
     {
-      id: 3,
+      id: 4,
       title: "TPs Observation Grid",
       description:
         "During my observation of my peers in the TESOL program, I had the opportunity to observe different classes at varying proficiency levels. This experience allowed me to gain insight into different teaching styles, classroom management strategies, and interaction techniques used by trainee teachers. It also helped me reflect on effective instructional practices and identify areas that contribute to successful lesson delivery and student engagement.",
@@ -135,7 +146,7 @@ export const portfolio = {
   // ----------------------------------------------------------
   // Project filter categories
   // ----------------------------------------------------------
-  categories: ["All", "My Teaching Philosophy", "TPs Observation Grid", "Reflections on Lessons Taught",],
+  categories: ["All", "My Teaching Philosophy", "Evaluation of the TESOL Training", "TPs Observation Grid", "Reflections on Lessons Taught",],
 } as const;
 
 export type Project = typeof portfolio.projects[number];
